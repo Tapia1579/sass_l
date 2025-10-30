@@ -13,12 +13,21 @@ $cBlack: #000;
     }
 }
 
+// CREAMOS UN MIXIN AL CUAL NOSOTROS LE ASIGNAMOS VARIABLES PRE-DEFINIDAS
+@mixin shadowC($blur, $shaCont, $bgColor) {
+    box-shadow: 0px 0px $blur $shaCont;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: $bgColor;
+}
+
 body {
     font-family: "Libre Baskerville", serif;
 }
 
 
 .headerC {
+    margin: auto;
     width: 100%;
     background-color: $bgCjs;
     padding: 5px;
@@ -59,6 +68,27 @@ body {
             padding: 5px;
             cursor: pointer;
             @include hover;
+        }
+    }
+}
+
+.mainC {
+    .mainC__art {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        &:first-child {
+            @include shadowC(45px, rgb(11, 240, 11), $cBlack);
+        }
+
+        &:nth-child(3) {
+            @include shadowC(45px, rgb(229, 255, 0), $cBlack);
+        }
+
+        &.mainC__art--two {
+            @include shadowC(15px, rgb(255, 0, 0), $cBlack);
         }
     }
 }
