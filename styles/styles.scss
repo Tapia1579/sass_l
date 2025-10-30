@@ -1,0 +1,64 @@
+$bgCjs: #d6c807;
+$cWhite: #fff;
+$cBlack: #000;
+
+@mixin flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin hover {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+body {
+    font-family: "Libre Baskerville", serif;
+}
+
+
+.headerC {
+    width: 100%;
+    background-color: $bgCjs;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .headerC__img {
+        background-color: $cBlack;
+        width: 100px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .headerC__nav {
+        @include flexbox;
+        gap: 5px;
+
+        a {
+            color: $cBlack;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            @include hover;
+        }
+    }
+
+    .headerC__cont {
+        @include flexbox;
+        border: 3px groove $cBlack;
+
+        a {
+            text-decoration: none;
+            color: $cBlack;
+            gap: 5px;
+            padding: 5px;
+            cursor: pointer;
+            @include hover;
+        }
+    }
+}

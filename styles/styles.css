@@ -1,0 +1,49 @@
+body {
+  font-family: "Libre Baskerville", serif;
+}
+
+.headerC {
+  width: 100%;
+  background-color: #d6c807;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerC .headerC__img {
+  background-color: #000;
+  width: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.headerC .headerC__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.headerC .headerC__nav a {
+  color: #000;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.headerC .headerC__nav a:hover {
+  text-decoration: underline;
+}
+.headerC .headerC__cont {
+  display: flex;
+  flex-direction: column;
+  border: 3px groove #000;
+}
+.headerC .headerC__cont a {
+  text-decoration: none;
+  color: #000;
+  gap: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.headerC .headerC__cont a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=styles.css.map */
