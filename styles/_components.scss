@@ -1,0 +1,36 @@
+&.asideC1__asi--btnOne {
+    @include shadowC(45px, rgb(250, 2, 2), $cBlack);
+    background-color: #5a005e;
+    @extend %button;
+}
+
+&.asideC1__asi--btnTwo {
+    @include shadowC(45px, rgb(253, 249, 6), $cBlack);
+    background-color: #5b505c;
+    @extend %button;
+}
+
+.mainC {
+    .mainC__art {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 25px;
+
+        &:first-child {
+            //difuminado, color de shadow y background-color
+            @include shadowC(45px, rgb(11, 240, 11), $cBlack);
+        }
+
+        &:nth-child(3) {
+            //difuminado, color de shadow y background-color
+            @include shadowC(45px, rgb(229, 255, 0), $cBlack);
+        }
+
+        &.mainC__art--two {
+            //difuminado, color de shadow y background-color
+            @include shadowC(45px, rgb(255, 0, 0), $cBlack);
+        }
+
+    }
+}

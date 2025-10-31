@@ -1,0 +1,60 @@
+body {
+    font-family: "Libre Baskerville", serif;
+}
+
+
+.headerC {
+    margin: auto;
+    width: 100%;
+    background-color: $bgCjs;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .headerC__img {
+        background-color: $cBlack;
+        width: 100px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .headerC__nav {
+        @include flexbox;
+
+        a {
+            @extend %link;
+            // @extend %link;
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    .headerC__cont {
+        @include flexbox;
+        border: 3px groove $cBlack;
+
+        a {
+            @extend %link;
+            padding: 5px;
+        }
+    }
+}
+
+.asideC1 {
+    .asideC1__asi {
+        width: 150px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 25px;
+        flex-direction: column;
+
+        // @media screen and (max-width: 1000px) {
+        //     display: none;
+        // }
+        @include devices {
+            display: none;
+        }
+    }
+}
